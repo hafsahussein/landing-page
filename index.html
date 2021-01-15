@@ -1,0 +1,274 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        :root{
+            --light-blue:#42A4Cd;
+            --white:#fefefe;
+            font-size: 16px;
+        }
+        /* basic styling */
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+      body{
+          background-color: var(--white);
+          font-family: 'Open Sans', sans-serif;
+      }
+        header{
+        position:fixed;
+        top:0;
+        width: 100%;
+        z-index:1;
+        height: 80px;
+        background-color: var(--white);
+        overflow: hidden;
+        padding-left: 20px;
+      }
+main{
+          position: relative;
+          top: 100px;
+          right: 0;
+          width: 95vw;
+          margin: 0 auto;
+          z-index: 0;
+          bottom: 0;
+} 
+      h2{
+        text-align: center;
+        margin-top: 100px;
+
+      }
+      h2,h3{
+          color: var(--light-blue);
+          padding: 10 0px;
+      }
+      h2,a{
+          text-transform: capitalize;
+      }
+      footer{
+        padding: 10px;  
+        font-size: 1.1rem;      
+      }
+           footer p{
+        text-align: center;
+    }
+           nav ul{
+            display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0 20px;
+            position: relative;
+            top: -58px;
+      }
+    
+      #header-img{
+          transform: translateY(-32%);
+          width: 200px;
+          height: 200px;
+          
+      }
+        #logo-container{
+          height: 80px;
+      }
+      ul .link-holder{
+          text-align: right;
+          padding:0 20px 5px 0;
+      }
+          ul li,a{
+          text-decoration: none;
+          color: var(--light-blue);
+          font-size: 1.2rem;
+          list-style-type: none;
+          white-space: nowrap;
+      }
+    
+         form input{
+         display: block;
+         width: 80%;
+         margin:10px auto;
+         padding: 10px 0;
+         border-radius: 5px;
+         border:none;
+     }
+     form input[type="email"]{
+         border:2px solid var(--light-blue)
+     }
+     form input[type="submit"]{
+         text-transform: uppercase;
+         font-size: 1.2rem;
+        background-color: var(--light-blue);
+        color:var(--white);
+         cursor: pointer;
+         transition:all 400ms;
+     }
+     form input[type="submit"]:hover{
+         background:var(--white);
+         color:var(--light-blue);
+         border:2px solid var(--light-blue);
+     }
+     .grid{
+         display: grid;
+     }
+     .services{
+         grid-template-columns: repeat(2,1fr);
+         grid-column-gap: 20px;
+         margin-bottom: 20px;
+     }
+     .services .image, .content{
+         width: 95%;
+         margin: 0 auto;
+     }
+     .content{
+        align-self: center;
+     }
+     .services img{
+         max-width: 100%;
+         width: 525px;
+        height: 250px;
+     }
+     .services:nth-child(3) .image{
+       grid-area:1/1/2/2;
+     }
+     .services h3{
+         text-transform: capitalize;
+     }
+     .updates{
+         grid-template-columns: repeat(3,1fr);
+         grid-column-gap: 20px;
+     }
+     #work{
+         margin: 0 10px;
+     }
+     iframe{
+         width: 100%;
+     }
+ 
+     @media screen and (max-width:720px) {
+         section .grid{
+            grid-template-columns: 1fr;
+            grid-row-gap: 20px;
+         }
+         .services:nth-child(3) .image{
+       grid-area:2/1/2/2;
+     }
+     }
+      @media screen and (max-width:600px) {
+       header{
+           height: fit-content;
+       }
+       nav{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           align-items: center;
+       }
+       main{
+           top:160px;
+          padding-top: 20px;
+       }
+       nav ul{
+        top: -15px;
+        width: 100%;
+           }
+      
+         ul .link-holder{
+        width: 100%;
+        text-align: center;
+             }
+   
+      }
+    </style>
+</head>
+<body>
+ 
+    <header id="header">
+        <nav id="nav-bar">
+            <li id="logo-container"><a href="#"><img src="https://www.verba.com/wp-content/uploads/2017/10/partner-logos-_0116_ict-solutions.jpg" alt="Company Logo" id="header-img"></a></li>
+            <ul>
+                <li class="link-holder"><a href="#services" class="nav-link">services</a></li>
+                <li class="link-holder"><a href="#updates" class="nav-link">updates</a></li>
+                <li class="link-holder"><a href="#work" class="nav-link">work</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="user-form">
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <input type="email" required id="email" name="email" placeholder="Your Email Here">
+                <input type="submit" value="get started" id="submit">
+            </form>
+        </section>
+        <section class="" id="services">
+            <h2>our services</h2>
+            <div class="grid services">
+               <div class="content">
+                   <h3>hardware maintenence</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum earum necessitatibus iure fugit veritatis ad eveniet ipsam dolores! Voluptatibus velit ratione quia pariatur suscipit, mollitia vel aperiam magnam sapiente?</p>
+               </div>
+               <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2012/04/13/17/00/lcd-32872_960_720.png" alt="">
+               </div>
+            </div>
+               <div class="grid services">
+                   <div class="content">
+                    <h3>web development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum earum necessitatibus iure fugit veritatis ad eveniet ipsam dolores! Voluptatibus velit ratione quia pariatur suscipit, mollitia vel aperiam magnam sapiente?</p> 
+                   </div>
+              <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2016/12/28/09/36/web-1935737__340.png" alt="">
+              </div>
+                </div>
+               <div class="grid services">
+                   <div class="content">
+                    <h3>mobile app development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum earum necessitatibus iure fugit veritatis ad eveniet ipsam dolores! Voluptatibus velit ratione quia pariatur suscipit, mollitia vel aperiam magnam sapiente?</p> 
+                   </div>
+                <div class="image">
+                    <img src="https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_960_720.jpg" alt="">
+                </div>
+                </div>
+    </section>
+        <section id="updates">
+            <h2>
+               monthly updates
+            </h2>
+         <div class="grid updates">
+            <div class="content">
+                <h3>Posted on April 8, 2020</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus atque corporis reiciendis obcaecati eaque accusantium praesentium, inventore consectetur consequatur quo porro quos officiis distinctio delectus maxime dignissimos sapiente tempora nostrum.</p>        
+            </div>
+            <div class="content">
+                <h3>Posted on March 8, 2020</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus atque corporis reiciendis obcaecati eaque accusantium praesentium, inventore consectetur consequatur quo porro quos officiis distinctio delectus maxime dignissimos sapiente tempora nostrum.</p>        
+            </div>
+            <div class="content">
+                <h3>Posted on February 8, 2020</h3>
+                <p style="z-index: 2;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus atque corporis reiciendis obcaecati eaque accusantium praesentium, inventore consectetur consequatur quo porro quos officiis distinctio delectus maxime dignissimos sapiente tempora nostrum.</p>        
+            </div>
+         </div>
+    </section>
+    <section id="work">
+        <h2>how does it work?</h2>
+        <iframe
+        id="video"
+        height="315"
+        src="https://www.youtube.com/embed/3F4f0g8xQLY"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>  
+</section>
+<footer>
+    <p>&copy; copy right <a href="https://www.sololearn.com/Profile/8436012">Hafsa Mohamed</a> 2020</p>
+</footer>  
+      </main>
+     
+</body>
+</html>
